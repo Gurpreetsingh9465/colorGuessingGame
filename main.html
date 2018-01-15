@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+       <link rel="stylesheet" href="style.css">
+       <title>Color Game</title>
+       <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    </head>
+    <body style="background-color: black; font-family: 'Raleway', sans-serif; text-align: center">
+       <div class = "container" style="color: white">
+           <div>THE GREAT</div>
+           <div id = "change"></div>
+           <div>THE GUESSING GAME</div>
+       </div>
+       <div id = "control">
+                <tr>
+                    <input id = "newGame" type="button" value="New Color" onClick="window.location.reload()">
+                    <span id = "output"></span>
+                    <input id = "easy" type="button" value="Easy">
+                    <input id = "hard" type="button" value="Hard">
+                </tr>
+            </div>
+        <table id="container">
+            <tr class="first">
+                <td class="blocks"></td>
+                <td class="blocks"></td>
+                <td class="blocks"></td>
+            </tr>
+            <tr class="second">
+                <td class="blocks"></td>
+                <td class="blocks"></td>
+                <td class="blocks"></td>
+            </tr>
+        </table>
+        
+        <script src="script.js"></script>
+    </body>
+</html>

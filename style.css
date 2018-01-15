@@ -1,0 +1,20 @@
+.blocks{
+    padding: 80px;
+    border-radius: 25px;
+    border: 5px solid black;
+}
+#container{
+    margin: auto;
+}
+#change{
+    font-size: 50px;
+}
+.container{
+    font-size: 20px;
+    background-color: rgb(121,73,223);
+}
+#control{
+    background-color: white;
+    height: 30px;
+    
+}
