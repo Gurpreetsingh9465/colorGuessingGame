@@ -5,6 +5,7 @@ function randomIntFromInterval(min,max)
 }
 var block = document.getElementsByClassName("blocks");
 var output = document.getElementById("output");
+var rgb = randomIntFromInterval(0,block.length-1);
 function loaded(){
     
     for(var j=0;j<block.length;j++){
@@ -14,7 +15,7 @@ function loaded(){
         var s = "rgb"+"("+r+","+g+","+b+")";
         block[j].style.backgroundColor = s;
     }
-    var rgb = randomIntFromInterval(0,block.length-1);
+    
     var bgc = block[rgb].getAttribute("style");
     var change = document.getElementById("change");
     var index = bgc.indexOf(";");
@@ -37,13 +38,21 @@ document.addEventListener('DOMContentLoaded',function(){
 }, false);
 var easy = document.getElementById("easy");
 easy.addEventListener("click",function(){
-    for(var a=3;a<6;a++){
+    var count = 0;
+    for(var a=0;a<block.length;a++){
+        if(a == rgb){
+            continue;
+        }
+        count += 1;
         block[a].style.display = "none";
+        if(count == 3){
+            break;
+        }
     }
 })
 var hard = document.getElementById("hard");
 hard.addEventListener("click",function(){
-    for(var a=3;a<6;a++){
+    for(var a=0;a<block.length;a++){
         block[a].style.display = "";
     }
 })
